@@ -27,5 +27,15 @@ public class Main {
         pr.programme();
         cook.cook();
         dr.drive();
+
+        Director director = new Director();
+        Cnt cnt = new Cnt();
+        director.force(cnt, 12);
+        director.force(new Counter() {
+            @Override
+            public String report(int month) {
+                return "Отчет за "+month+" месяцев";
+            }
+        }, 11);
     }
 }
