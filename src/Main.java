@@ -37,5 +37,17 @@ public class Main {
                 return "Отчет за "+month+" месяцев";
             }
         }, 11);
+
+        try {
+            int[] nums = new int[1];
+            nums[0] = 1;
+            nums[2] = 2;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Ошибка ArrayIndexOutOfBoundsException: "+e);
+        } catch (Exception e1) {
+            System.out.println("Другая ошибка "+e1);
+        }
+        int random = (int)(Math.random()*90+10);
+        System.out.println(String.format("Случайное число %s Попробуйте еще раз", random));
     }
 }
